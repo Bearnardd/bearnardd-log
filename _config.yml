@@ -2,8 +2,8 @@
 title: Bearnardd's log
 url: https://bearnardd.github.io/
 paginate: 1
-paginate_path: "/page:num/"
-baseurl: ""
+paginate_path: "/dark-poole/page:num/"
+baseurl: "/dark-poole"
 permalink: pretty
 
 # Gems
@@ -43,7 +43,7 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Blog
-    url: /archive
+    url: /dark-poole/archive
 
   - title: About
-    url: /about
+    url: /dark-poole/about
