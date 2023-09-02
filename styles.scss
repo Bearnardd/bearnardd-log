@@ -29,6 +29,9 @@
 @import "message";
 @import "toc";
 
+// Default values
+$spacing-unit:     30px !default;
+
 // Sass for creating the swatches
 .colors {
   display: grid;
