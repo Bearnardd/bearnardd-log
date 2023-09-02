@@ -31,6 +31,9 @@
 
 // Default values
 $spacing-unit:     30px !default;
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
 
 // Sass for creating the swatches
 .colors {
