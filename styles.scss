@@ -45,3 +45,25 @@
     margin-left: var(--spacer);
   }
 }
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-link {
+  display: block;
+  @include relative-font-size(1.5);
+
+  &:hover {
+    color: $crimson-color-light;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+
