@@ -5,7 +5,8 @@
 
 code,
 pre {
-  font-family: var(--code-font);
+  // font-family: var(--code-font);
+  font-family: "Ubuntu Mono";
 }
 
 code {
@@ -23,7 +24,10 @@ pre {
   padding: var(--spacer);
   margin-bottom: var(--spacer);
   background-color: var(--code-bg);
-  border-radius: var(--border-radius);
+  // background-color: #f8f8f8;
+  color: white;
+  // border-radius: var(--border-radius);
+  border-radius: 10px;
 
   pre {
     margin-bottom: 0;

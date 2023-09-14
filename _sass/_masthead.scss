@@ -12,13 +12,15 @@
   margin-bottom: 0;
 
   a {
-    color: inherit;
+    // color: inherit;
+    color: white;
     text-decoration: none;
   }
 
   small {
     font-weight: 400;
     opacity: 0.5;
+    color: white;
   }
 }
 
@@ -27,4 +29,5 @@
   float: right;
   line-height: 1.25rem;
   word-spacing: 1rem;
+  color: white;
 }

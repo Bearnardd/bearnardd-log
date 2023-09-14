@@ -30,11 +30,15 @@
   --blue-400: #4dabf7;
   --yellow-100: #fff3bf;
 
-  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --body-font-size: 20px;
-  --body-line-height: 1.5;
+  // --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  //   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  //   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+  --body-font: SFMono-Regular, Menlo, "Ubuntu";
+
+  --body-font-size: 16px;
+  --body-line-height: 1.7;
   --body-color: var(--gray-700);
   --body-bg: #fff;
 
@@ -46,8 +50,9 @@
   --border-color: var(--gray-300);
   --border-radius: 0.25rem;
 
-  --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  --code-font: "Ubuntu Mono"
+  // --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  //   "Courier New", monospace;
   --code-color: var(--grape);
   --code-bg: var(--gray-000);
 
@@ -68,7 +73,8 @@
 
     --border-color: rgba(255, 255, 255, 0.15);
 
-    --code-bg: var(--gray-900);
+    // --code-bg: var(--gray-900);
+    // --code-bg: white;
   }
 }
 
@@ -77,8 +83,9 @@
   --body-color: var(--dark-poole-002);
   --body-bg: var(--dark-poole-001);
   --heading-color: var(--dark-poole-002);
-  --link-color: var(--dark-poole-link-color);
+  // --link-color: var(--dark-poole-link-color);
   --link-hover-color: var(--dark-poole-link-hover);
   --border-color: rgba(255, 255, 255, 0.15);
   --code-bg: var(--gray-900);
+  // --code-bg: gray;
 }
