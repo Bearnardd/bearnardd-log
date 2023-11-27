@@ -6,11 +6,25 @@ paginate_path: "/bearnardd-log/page:num/"
 baseurl: "/bearnardd-log"
 permalink: pretty
 
+
+markdown: kramdown
+highlighter: rouge
+  # input: GFM
+
+# markdown:
+#     auto_ids: true
+
+kramdown:
+  auto_ids: true
+
 # Gems
 plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+
+
+
 
 # Optimize Jekyll
 
