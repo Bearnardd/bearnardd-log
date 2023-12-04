@@ -28,7 +28,7 @@ Data Parallelism is one of the most commonly used parallelisation techniques tha
 
 ![]({{"/assets/images/data_parallel.png" | relative_url }} )
 
-The main drawback of this implementation is the communication bottleneck that grows linearly with the number of nodes: $ (\texttt{num\_nodes} - 1) \times \texttt{input\_size}$ for both gather and fetch operations. The second implementation, called __Ring All-Reduce__, mitigates this problem because its communication cost is independent of the number of nodes in a system. As the name suggests, we arrange nodes into a ring-like structure. Each node sends a portion of its state to the right node and receives a portion of the state from the left node. Each node adds its value to the value received from the previous node, and the result is passed along the ring until it returns to the starting node. It can be decomposed into two stages, scatter-reduce and allgather operations. It is best explained by vizualization.
+The main drawback of this implementation is the communication bottleneck that grows linearly with the number of nodes: $ (\texttt{num\_nodes} - 1) \times \texttt{input\_size}$ for both gather and fetch operations. The second implementation, called __Ring All-Reduce__, mitigates this problem because its communication cost is independent of the number of nodes in a system. As the name suggests, we arrange nodes into a ring-like structure. Each node sends a portion of its state to the right node and receives a portion of the state from the left node. Each node adds its value to the value received from the previous node, and the result is passed along the ring until it returns to the starting node. It can be decomposed into two stages, scatter-reduce and allgather operations. It is best explained by visualization.
 
 
 ![]({{"/assets/images/all_reduce_setup.png" | relative_url }} )
@@ -222,6 +222,11 @@ input_tensor = torch.rand(16, 16).cuda(0)
 output_rref = model(input_tensor)
 ```
 
+## Summary
+
+In this blog post, we've uncovered the challenges faced by single-GPU systems when training larger deep learning models. We've taken a deep dive into distributed training methods, exploring Data and Model Parallelism. By spreading the workload across multiple nodes like GPUs and TPUs, these techniques not only speed up training but also allow for handling bigger models. Embracing these distributed training methods provides a roadmap for tackling the evolving demands of deep learning, and fostering innovation and progress in the field. We will take a look at the ZeRO and Fully Sharded Data Parallel methods in the next blog post.
+
+
 
 ## References
 
@@ -230,6 +235,6 @@ output_rref = model(input_tensor)
 [3] [https://developer.nvidia.com/nccl](https://developer.nvidia.com/nccl)  
 [4] [https://tech.preferred.jp/en/blog/technologies-behind-distributed-deep-learning-allreduce/](https://tech.preferred.jp/en/blog/technologies-behind-distributed-deep-learning-allreduce/)  
 [5] [https://www.mishalaskin.com/posts/data_parallel#multiple-data-points-on-one-device](https://www.mishalaskin.com/posts/data_parallel#multiple-data-points-on-one-device)  
-[6] [https://pytorch.org/docs/stable/rpc.html](https://pytorch.org/docs/stable/rpc.html)
-[7] [https://pytorch.org/docs/stable/pipeline.html](https://pytorch.org/docs/stable/pipeline.html)
-[8] [https://huggingface.co/docs/transformers/v4.15.0/parallelism](https://huggingface.co/docs/transformers/v4.15.0/parallelism)
+[6] [https://pytorch.org/docs/stable/rpc.html](https://pytorch.org/docs/stable/rpc.html)  
+[7] [https://pytorch.org/docs/stable/pipeline.html](https://pytorch.org/docs/stable/pipeline.html)  
+[8] [https://huggingface.co/docs/transformers/v4.15.0/parallelism](https://huggingface.co/docs/transformers/v4.15.0/parallelism)  
