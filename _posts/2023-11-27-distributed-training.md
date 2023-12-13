@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deep Dive into Large Scale Distributed Training (Part 1)
-tag: "distributed training, Pytorch, Tensorflow, Flax"
+tag: distributed training, Pytorch, Tensorflow, Flax
 date: 2023-11-27 18:10:00
 desc: Deep dive into methods and strategies for distributed training with Pytorch code snippets
 author: Bearnardd
